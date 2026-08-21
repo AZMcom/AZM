@@ -12,7 +12,6 @@
             overflow: hidden;
             background: #fcf3ed;
         }
-
         /* ---------- 密码弹窗 ---------- */
         .password-modal-wrap {
             position: fixed;
@@ -68,7 +67,6 @@
             background: #d8a8d0;
             color: #fff;
         }
-
         /* ---------- 左侧导航 ---------- */
         .sidebar {
             background: linear-gradient(145deg, #f7d6e0, #e9c8e6, #d9b8e8, #c9a8e6);
@@ -87,13 +85,11 @@
             width: 56px;
             min-width: 56px;
         }
-
         .avatar-box {
             text-align: center;
             padding: 12px 10px 20px;
             border-bottom: 1px solid rgba(255,255,255,0.35);
             margin-bottom: 16px;
-            white-space: nowrap;
         }
         .sidebar.collapsed .avatar-name { display: none; }
         .sidebar.collapsed .avatar-img {
@@ -117,7 +113,6 @@
             text-shadow: 0 1px 6px rgba(120,60,120,0.2);
             letter-spacing: 0.5px;
         }
-
         .toggle-btn {
             position: absolute;
             right: 0;
@@ -141,7 +136,6 @@
         .toggle-btn:hover {
             background: rgba(255,200,230,0.5);
         }
-
         .sidebar a {
             display: block;
             color: #fff;
@@ -169,7 +163,6 @@
             border-left-color: #ffffff;
             backdrop-filter: blur(2px);
         }
-
         /* ---------- 目录页 ---------- */
         .catalog-page{
             padding:48px 40px;
@@ -189,7 +182,6 @@
         .catalog-search-input:focus{
             border-color:#d8a8d0;
         }
-
         .catalog-group-block{
             margin-bottom:28px;
         }
@@ -227,7 +219,6 @@
             border-top:1px dashed #e2cce0;
             pointer-events:none;
         }
-
         /* ---------- 页面容器 ---------- */
         .page-container {
             flex: 1;
@@ -235,7 +226,6 @@
             overflow-y: auto;
             background: #fcf3ed;
         }
-        /* 修复BUG：所有页面默认隐藏，不允许子class覆盖display属性 */
         .page {
             min-height: 100%;
             display: none !important;
@@ -248,8 +238,6 @@
             0% { opacity: 0.6; transform: translateY(6px); }
             100% { opacity: 1; transform: translateY(0); }
         }
-
-        /*=====主页：flex放到内部容器，不再污染.page外层=====*/
         .home-page {
             background: radial-gradient(circle at 20% 30%, #fce4ec, #f3d9f5, #edd6f0, #e0cce8);
             color: #2d1b2e;
@@ -283,8 +271,6 @@
             line-height: 1.8;
             margin:12px 0 32px;
         }
-
-        /*===== 联系信息模块 =====*/
         .home-contact-box{
             max-width: 360px;
             margin:0 auto;
@@ -320,8 +306,6 @@
         .contact-value a:hover{
             text-decoration:underline;
         }
-
-        /*===== 更新日记栏 放页面最底部 =====*/
         .update-log-wrap{
             max-width:780px;
             margin:0 auto;
@@ -376,8 +360,6 @@
         .update-log-list li:last-child{
             margin-bottom:0;
         }
-
-        /* ---------- 板块页面 ---------- */
         .block-page {
             padding: 48px 40px;
             background: radial-gradient(circle at 20% 30%, #fce4ec, #f3d9f5, #edd6f0, #e0cce8);
@@ -394,12 +376,10 @@
         .block-sub-title:first-of-type{
             margin-top:12px;
         }
-
         .tutorial-page {
             padding: 48px 40px;
             background: radial-gradient(circle at 30% 40%, #fce4ec, #f3d9f5, #edd6f0, #e0cce8);
         }
-
         .tutorial-content h2 {
             font-size: 48px;
             color: #2d1b2e;
@@ -410,36 +390,112 @@
         .tutorial-desc {
             font-size: 18px;
             color: #3d2a3e;
-            margin-bottom: 28px;
+            margin-bottom: 32px;
             max-width: 780px;
         }
-        .tutorial-img {
-            width: 100%;
-            max-width: 1000px;
-            border-radius: 28px;
-            box-shadow: 0 12px 32px rgba(120, 60, 120, 0.15);
-            border: 2px solid rgba(255, 255, 255, 0.3);
+        .tutorial-sub-title {
+            font-size: 24px;
+            font-weight: 600;
+            color: #2d1b2e;
+            margin: 40px 0 16px;
+            padding-left: 10px;
+            border-left: 4px solid #d8a8d0;
         }
-        .tutorial-text-below-img{
+        .tutorial-sub-section {
+            margin-bottom: 24px;
+        }
+        /* 模块容器 */
+        .tutorial-module{
+            margin-bottom:36px;
+        }
+        .media-toggle-btn{
+            padding:10px 18px;
+            border-radius:12px;
+            border:1px solid #d8a8d0;
+            background:rgba(255,255,255,0.55);
+            cursor:pointer;
+            font-size:15px;
+            color:#3d2a3e;
+            margin-bottom:12px;
+        }
+        .tutorial-text{
             max-width:1000px;
-            margin:24px 0;
+            margin:12px 0;
             font-size:17px;
             line-height:1.8;
             color:#3d2a3e;
         }
-        .tutorial-video-wrap{
-            max-width:1000px;
+        .img-wrap{
+            display:none;
+            margin:8px 0 12px 0;
+        }
+        .img-wrap.show{
+            display:block;
+        }
+        .video-wrap{
+            display:none;
+            margin:12px 0 8px 0;
+        }
+        .video-wrap.show{
+            display:block;
+        }
+        .tutorial-click-img{
+            max-width:520px;
             width:100%;
-            border-radius:28px;
+            border-radius:20px;
+            box-shadow: 0 12px 32px rgba(120, 60, 120, 0.15);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            cursor:zoom-in;
+        }
+        .tutorial-click-video-wrap{
+            max-width:520px;
+            width:100%;
+            border-radius:20px;
             overflow:hidden;
             box-shadow:0 12px 32px rgba(120, 60, 120, 0.15);
             border:2px solid rgba(255,255,255,0.3);
         }
-        .tutorial-video-wrap video{
+        .tutorial-click-video-wrap video{
             width:100%;
             display:block;
         }
-
+        /* =========图片视频放大弹窗========= */
+        .preview-modal{
+            position:fixed;
+            inset:0;
+            background:rgba(0,0,0,0.85);
+            z-index:10000;
+            display:none;
+            align-items:center;
+            justify-content:center;
+            padding:20px;
+        }
+        .preview-modal.show{
+            display:flex;
+        }
+        .preview-close{
+            position:absolute;
+            top:16px;
+            right:24px;
+            color:#fff;
+            font-size:36px;
+            cursor:pointer;
+            user-select:none;
+        }
+        .preview-inner{
+            max-width:92%;
+            max-height:92vh;
+        }
+        .preview-inner img{
+            max-width:100%;
+            max-height:90vh;
+            border-radius:12px;
+        }
+        .preview-inner video{
+            max-width:100%;
+            max-height:90vh;
+            border-radius:12px;
+        }
         .block-page h2 {
             font-size:42px;
             font-weight: 700;
@@ -449,14 +505,12 @@
             text-shadow: 0 1px 6px rgba(255, 200, 220, 0.2);
             margin-bottom:20px;
         }
-
         .card-wrap {
             display: grid;
             grid-template-columns: repeat(auto-fill, 280px);
             gap: 24px;
             margin-top: 30px;
         }
-        /* ===== 卡片新布局：固定尺寸，左侧详情面板绝对定位浮层 ===== */
         .card-item {
             position: relative;
             width: 280px;
@@ -475,7 +529,6 @@
             box-shadow: 0 14px 34px rgba(140, 80, 130, 0.2);
             transform: translateY(-3px);
         }
-        /* 左侧详情面板：绝对定位浮层 */
         .card-side-panel {
             position: absolute;
             left: 0;
@@ -495,7 +548,6 @@
         .card-side-panel.open {
             width: 230px;
         }
-        /* 快捷按钮 */
         .card-quick-btn {
             width: 100%;
             padding: 14px 0;
@@ -516,7 +568,6 @@
             background: linear-gradient(180deg, rgba(216,168,208,0.4), rgba(216,168,208,0.2));
             color: #5a3558;
         }
-        /* 侧边内容区 */
         .card-side-content {
             flex: 1;
             width: 100%;
@@ -595,8 +646,29 @@
             background: rgba(255, 215, 235, 0.25);
             color: #fff;
         }
-
-        /* 侧边详情文字 */
+        .card-bottom-link-wrap{
+            position:absolute;
+            z-index:4;
+            bottom:12px;
+            right:12px;
+        }
+        .card-bottom-link{
+            color:#ffffff;
+            font-size:14px;
+            font-weight:500;
+            text-decoration:underline;
+            text-underline-offset:4px;
+            background:rgba(206, 155, 155, 0.35);
+            padding:6px 14px;
+            border-radius:40px;
+            backdrop-filter: blur(3px);
+            transition:0.2s;
+            border:1px solid rgba(224, 162, 168, 0.25);
+        }
+        .card-bottom-link:hover{
+            background:rgba(199, 183, 183, 0.55);
+            color:#fff;
+        }
         .card-desc-text{
             padding:12px;
             font-size:14px;
@@ -608,7 +680,6 @@
             box-shadow:0 2px 8px rgba(119, 75, 120, 0.06);
             word-break: break-word;
         }
-
         .drag-box {
             width: 250px;
             background: rgba(255, 245, 250, 0.92);
@@ -659,8 +730,6 @@
     </style>
 </head>
 <body class="flex">
-
-    <!-- 密码弹窗 -->
     <div class="password-modal-wrap" id="pwModal">
         <div class="password-modal-box">
             <h4>🔒访问加密版块，请输入密码</h4>
@@ -671,72 +740,68 @@
             </div>
         </div>
     </div>
-
-    <!-- 左侧导航栏 -->
+    <div class="preview-modal" id="previewModal">
+        <div class="preview-close" id="previewClose">×</div>
+        <div class="preview-inner" id="previewInner"></div>
+    </div>
     <div class="sidebar" id="sidebar">
         <div class="toggle-btn" id="toggleBtn">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="15 6 9 12 15 18"></polyline></svg>
         </div>
-
         <div class="avatar-box">
             <img class="avatar-img" src="图片/头像.jpg" alt="头像">
             <div class="avatar-name">AZM</div>
         </div>
-
         <a data-target="home" class="active">主页</a>
         <a data-target="catalog">目录</a>
         <a data-target="tutorial">教程</a>
-        <a data-target="block1">版块1</a>
-        <a data-target="block2">版块2</a>
-        <a data-target="block3">版块3</a>
-        <a data-target="block4">版块4</a>
+        <a data-target="block1">版块1 · 系列</a>
+        <a data-target="block2">版块2 · 散汇</a>
+        <a data-target="block3">版块3 · 私享</a>
+        <a data-target="block4">版块4 · 其他</a>
         <a data-target="block5">🔒加密版块5</a>
     </div>
-
-    <!-- 页面容器 -->
     <div class="page-container">
-        <!-- 主页 -->
         <div id="home" class="page show home-page">
             <div class="home-inner-wrap">
                 <div class="home-inner-center">
-                    <h1>主标题 · 灵感花园</h1>
+                    <h1>主页 · 简介</h1>
                     <p class="home-desc-text">
-                        这里写主页描述文字，介绍网站整体简介。
+                       本网站是为我b站发布视频的删减部分所建立服务，找别的资源的可以退出了。
+                       <br>以前都是用百度网盘分享的，现在被ban成存储盘。
+                       <br>后换成小飞机网盘，做了个wps的文档把所有链接整理，共享结果没多久就被ban了。
+                       <br>下策用网盘分享word，每次更新还得下新的文件，过于繁琐，所以研究弄了这个网站。
+                       <br>本网站是靠ai做的，和ai聊了一天也算是做了个完整的网站模板。
+                       <br>如果本网站使用不了，可通过点击下方下载整理的word文档（下载最新日期）
+                       <br>  <span class="contact-value"><a href="https://pan.baidu.com/s/1mHBQgWBHOcGq2EQdMggMAA?pwd=y5y6" target="_blank">通过百度网盘下载 </a></span>
+                       <br>  <span class="contact-value"><a href="https://share.feijipan.com/s/H4cWVVMa" target="_blank"> 通过小飞机网盘下载</a></span>
+                       <br>如有链接、文件出了问题请联系我
                     </p>
                     <div class="home-contact-box">
                         <div class="home-contact-title">✉️联系信息</div>
                         <div class="contact-item">
-                            <span class="contact-label">B站 UID</span>
-                            <span class="contact-value"><a href="https://space.bilibili.com/替换为UID" target="_blank">12345678</a></span>
+                            <span class="contact-label">B站UID:</span>
+                            <span class="contact-value"><a href="https://space.bilibili.com/19102237" target="_blank">19102237</a></span>
                         </div>
                         <div class="contact-item">
-                            <span class="contact-label">QQ交流群</span>
-                            <span class="contact-value">123456789</span>
+                            <span class="contact-label">QQ群：</span>
+                            <span class="contact-value">938868894</span>
                         </div>
                     </div>
                 </div>
-
-                <!-- 更新日记栏 · 页面最底部 -->
                 <div class="update-log-wrap">
                     <div class="update-log-title">📅更新日记</div>
                     <ul class="update-log-list">
-                        <li>2026‑08‑20：版块1‑4新增页面内搜索功能，优化卡片检索</li>
-                        <li>2026‑08‑19：调整页面样式，优化移动端显示细节</li>
-                        <li>2026‑08‑18：完善加密版块密码校验逻辑</li>
-                        <li>2026‑08‑17：新增目录总页面，整理全部栏目导航</li>
-                        <li>2026‑08‑16：示例条目1</li>
-                        <li>2026‑08‑15：示例条目2</li>
-                        <li>2026‑08‑14：示例条目3</li>
+                        <li>2026-08-21：大秽switch有消息今年发布，还有官中，期待（能上steam就更好了）</li>
+                        <li>2026-08-21：想增加些内容，结果搞的本来功能失效，罢了也算是把教程界面改好了</li>
+                        <li>2026-08-20：让ai调整了一天，网站雏形总算是完成了，开始着手完善内容</li>
                     </ul>
                 </div>
             </div>
         </div>
-
-        <!-- 目录页面 -->
         <div id="catalog" class="page catalog-page">
             <h2>📋栏目总目录</h2>
             <input class="catalog-search-input" id="catalogSearch" placeholder="🔍搜索目录标题、描述关键词...">
-
             <div class="catalog-group-block">
                 <div class="catalog-group-title">主栏目</div>
                 <div class="catalog-item-block">
@@ -745,62 +810,112 @@
                 </div>
                 <div class="catalog-item-block">
                     <div class="catalog-title-link" data-goto="tutorial">教程</div>
-                    <p class="catalog-item-desc">查看图文教学内容</p>
+                    <p class="catalog-item-desc">查看教学内容</p>
                 </div>
             </div>
-
             <div class="catalog-group-block">
                 <div class="catalog-group-title">内容板块</div>
                 <div class="catalog-item-block">
-                    <div class="catalog-title-link" data-goto="block1">版块1 · 灵感</div>
+                    <div class="catalog-title-link" data-goto="block1">板块1 · 系列：同一社团或者系列作品</div>
                     <p class="catalog-item-desc">灵感素材与参考内容，本段文字仅展示，不触发跳转</p>
                 </div>
                 <div class="catalog-item-block">
-                    <div class="catalog-title-link" data-goto="block2">版块2 · 探索</div>
+                    <div class="catalog-title-link" data-goto="block2">版块2 · 散汇：未放到系列的作品</div>
                     <p class="catalog-item-desc">探索更多主题内容，本段文字仅展示，不触发跳转</p>
                 </div>
                 <div class="catalog-item-block">
-                    <div class="catalog-title-link" data-goto="block3">版块3 · 视野</div>
+                    <div class="catalog-title-link" data-goto="block3">版块3 · 私享：未上传b站的作品（完整视频）</div>
                     <p class="catalog-item-desc">拓展视野与知识整理，本段文字仅展示，不触发跳转</p>
                 </div>
                 <div class="catalog-item-block">
-                    <div class="catalog-title-link" data-goto="block4">版块4 · 资源</div>
-                    <p class="catalog-item-desc">资料下载与资源汇总，本段文字仅展示，不触发跳转</p>
+                    <div class="catalog-title-link" data-goto="block4">版块4 · 其他：不上传b站的作品（完整视频）</div>
+                    <p class="catalog-item-desc">拓展视野与知识整理，本段文字仅展示，不触发跳转</p>
                 </div>
             </div>
-
             <div class="catalog-group-block">
                 <div class="catalog-group-title">资源专区</div>
                 <div class="catalog-item-block">
                     <div class="catalog-title-link" data-goto="block5">🔒加密版块5</div>
-                    <p class="catalog-item-desc">内部资料访问入口</p>
+                    <p class="catalog-item-desc">（暂未开启）内部资料访问入口</p>
                 </div>
             </div>
         </div>
-
-        <!-- 教程页 -->
+        <!--教程页：拆分成两个独立模块-->
         <div id="tutorial" class="page tutorial-page">
             <div class="tutorial-content">
-                <h2>教程标题 · 设计入门</h2>
-                <p class="tutorial-desc">这里是标题下方说明文字，一行简介描述教程主要内容。从基础到进阶，轻松掌握。</p>
-                <img class="tutorial-img" src="https://picsum.photos/id/1060/1200/600" alt="教程配图">
-                <div class="tutorial-text-below-img">
-                    这里放置图片下方说明文本，可以写步骤详解、注意要点、补充说明等内容，文字会自动换行，适配移动端显示。
+                <h2>教程 · 板块操作及解压教程</h2>
+                <p class="tutorial-desc">！所有提取码为我b站UID前四位。表层解压码为520，有里层解压码的看b站视频评论/简介！</p>
+
+                <!--模块1：展开图片模块：按钮 →【图片容器】→第一行说明文字 -->
+                <div class="tutorial-module">
+                    <div class="tutorial-sub-title">版块操作</div>
+                    <div class="tutorial-text">
+                        以防有人不会操作，简单做下图文说明。
+                    </div>
+                    <button class="media-toggle-btn" id="btnImg" data-target="imgWrap" data-close-text="🔽展开图片" data-open-text="🔼收起图片">🔽展开图片</button>
+                    <!--图片：在第一行文字上方-->
+                    <div class="img-wrap" id="imgWrap">
+                        <img class="tutorial-click-img" data-preview="image" src="https://github.com/AZMcom/AZM/blob/main/%E5%9B%BE%E7%89%87/%E8%A7%A3%E5%8E%8B%E6%96%B9%E6%B3%95.jpg?raw=true" alt="教程配图">
+                    </div>
                 </div>
-                <div class="tutorial-video-wrap">
-                    <video controls preload="metadata">
-                        <source src="video/demo.mp4" type="video/mp4">
-                        您的浏览器不支持视频播放
-                    </video>
+
+                <!--下面这不能删，一删，版块页面就不对了 -->
+                <div class="tutorial-module">
+              
+                    <!--视频：放在第二行文字下方 -->
+                    <div class="video-wrap" id="videoWrap">
+                        <div class="tutorial-click-video-wrap" data-preview="video">
+                            <video controls preload="metadata">
+
+                            </video>
+                        </div>
+                    </div>
+                </div>
+                <!-- 小标题模块1 -->
+                <div class="tutorial-sub-section">
+                    <div class="tutorial-sub-title">解压教程-电脑</div>
+                    <div class="tutorial-text">
+                        点视频中间可以放大的，右下是放大到全屏。
+                    </div>
+                    <button class="media-toggle-btn" data-target="subVideo1" data-close-text="🔽展开视频" data-open-text="🔼收起视频">🔽展开视频</button>
+                    <div class="video-wrap" id="subVideo1">
+                        <div class="tutorial-click-video-wrap" data-preview="video">
+                            <video controls preload="metadata">
+                                <source src="https://github.com/user-attachments/assets/b29c3f1b-bc89-48a8-8818-5d6fb92eda8f" type="video/mp4">
+                                您的浏览器不支持视频播放
+                            </video>
+                        </div>
+                    </div>
+                </div>
+                <!-- 小标题模块2 -->
+                <div class="tutorial-sub-section">
+                    <div class="tutorial-sub-title">解压教程-手机</div>
+                    <div class="tutorial-text">
+                        写的文字过于多了，看图就能知道咋解压了。注：下载后在手机文件夹xiaofeji里（别用网盘解压）
+                    </div>
+                    <button class="media-toggle-btn" data-target="subImg2" data-close-text="🔽展示图片" data-open-text="🔼收起图片">🔽展示图片</button>
+                    <div class="img-wrap" id="subImg2">
+                        <img class="tutorial-click-img" data-preview="image" src="https://github.com/AZMcom/AZM/blob/main/%E5%9B%BE%E7%89%87/%E8%A7%A3%E5%8E%8B%E6%96%B9%E6%B3%95.jpg?raw=true" alt="教程配图">
+                    </div>
+                    <div class="tutorial-text">
+                        手机实际操作的解压流程，QQ浏览器遇到好几个下载的压缩包打开是空白的，可以换个解压软件试试。
+                    </div>
+                    <button class="media-toggle-btn" data-target="subVideo2" data-close-text="🔽展开视频" data-open-text="🔼收起视频">🔽展开视频</button>
+                    <div class="video-wrap" id="subVideo2">
+                        <div class="tutorial-click-video-wrap" data-preview="video">
+                            <video controls preload="metadata">
+                                <source src="https://github.com/user-attachments/assets/a83e2487-3372-47ef-9195-ac4ea36c36de" type="video/mp4">
+                                您的浏览器不支持视频播放
+                            </video>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <!-- 版块1 -->
         <div id="block1" class="page block-page">
-            <h2>版块1 · 灵感</h2>
+            <h2>版块1 · 系列</h2>
             <input class="catalog-search-input block-search" placeholder="🔍搜索卡片标题关键词...">
-
             <div class="block-sub-title">第一组素材</div>
             <div class="card-wrap">
                 <div class="card-item" data-text="标题：超链接A">
@@ -815,6 +930,9 @@
                         <div class="card-mask"></div>
                         <div class="card-text-link">
                             <a href="https://www.baidu.com" target="_blank">标题：超链接A</a>
+                        </div>
+                        <div class="card-bottom-link-wrap">
+                            <a class="card-bottom-link" href="https://www.baidu.com" target="_blank">b站视频</a>
                         </div>
                     </div>
                 </div>
@@ -831,10 +949,13 @@
                         <div class="card-text-link">
                             <a href="https://www.baidu.com" target="_blank">标题：超链接B</a>
                         </div>
+                        <div class="card-bottom-link-wrap">
+                            <a class="card-bottom-link" href="https://www.baidu.com" target="_blank">b站视频</a>
+                        </div>
                     </div>
                 </div>
             </div>
-
+            
             <div class="block-sub-title">第二组素材</div>
             <div class="card-wrap">
                 <div class="card-item" data-text="标题：超链接C">
@@ -849,6 +970,9 @@
                         <div class="card-mask"></div>
                         <div class="card-text-link">
                             <a href="https://www.baidu.com" target="_blank">标题：超链接C</a>
+                        </div>
+                        <div class="card-bottom-link-wrap">
+                            <a class="card-bottom-link" href="https://www.baidu.com" target="_blank">b站视频</a>
                         </div>
                     </div>
                 </div>
@@ -865,10 +989,12 @@
                         <div class="card-text-link">
                             <a href="https://www.baidu.com" target="_blank">标题：超链接D</a>
                         </div>
+                        <div class="card-bottom-link-wrap">
+                            <a class="card-bottom-link" href="https://www.baidu.com" target="_blank">b站视频</a>
+                        </div>
                     </div>
                 </div>
             </div>
-
             <div class="block-sub-title">第三组素材</div>
             <div class="card-wrap">
                 <div class="card-item" data-text="标题：超链接E">
@@ -884,12 +1010,13 @@
                         <div class="card-text-link">
                             <a href="https://www.baidu.com" target="_blank">标题：超链接E</a>
                         </div>
+                        <div class="card-bottom-link-wrap">
+                            <a class="card-bottom-link" href="https://www.baidu.com" target="_blank">b站视频</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-
-        <!-- 版块2 -->
         <div id="block2" class="page block-page">
             <h2>版块2 · 探索</h2>
             <input class="catalog-search-input block-search" placeholder="🔍搜索卡片标题关键词...">
@@ -907,6 +1034,9 @@
                         <div class="card-text-link">
                             <a href="https://www.baidu.com" target="_blank">标题：超链接</a>
                         </div>
+                        <div class="card-bottom-link-wrap">
+                            <a class="card-bottom-link" href="https://www.baidu.com" target="_blank">b站视频</a>
+                        </div>
                     </div>
                 </div>
                 <div class="card-item" data-text="标题：超链接">
@@ -922,12 +1052,13 @@
                         <div class="card-text-link">
                             <a href="https://www.baidu.com" target="_blank">标题：超链接</a>
                         </div>
+                        <div class="card-bottom-link-wrap">
+                            <a class="card-bottom-link" href="https://www.baidu.com" target="_blank">b站视频</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-
-        <!-- 版块3 -->
         <div id="block3" class="page block-page">
             <h2>版块3 · 视野</h2>
             <input class="catalog-search-input block-search" placeholder="🔍搜索卡片标题关键词...">
@@ -945,12 +1076,13 @@
                         <div class="card-text-link">
                             <a href="https://www.baidu.com" target="_blank">标题：超链接</a>
                         </div>
+                        <div class="card-bottom-link-wrap">
+                            <a class="card-bottom-link" href="https://www.baidu.com" target="_blank">b站视频</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-
-        <!-- 版块4 -->
         <div id="block4" class="page block-page">
             <h2>版块4 · 资源</h2>
             <input class="catalog-search-input block-search" placeholder="🔍搜索卡片标题关键词...">
@@ -968,12 +1100,13 @@
                         <div class="card-text-link">
                             <a href="https://www.baidu.com" target="_blank">标题：超链接</a>
                         </div>
+                        <div class="card-bottom-link-wrap">
+                            <a class="card-bottom-link" href="https://www.baidu.com" target="_blank">b站视频</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-
-        <!-- 版块5 -->
         <div id="block5" class="page block-page">
             <h2>🔒加密版块5 · 内部资料</h2>
             <div class="card-wrap">
@@ -990,187 +1123,219 @@
                         <div class="card-text-link">
                             <a href="https://www.baidu.com" target="_blank">内部文件链接</a>
                         </div>
+                        <div class="card-bottom-link-wrap">
+                            <a class="card-bottom-link" href="https://www.baidu.com" target="_blank">b站视频</a>
+                        </div>
+                        
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-    <!--右下角可拖拽提示框-->
     <div class="drag-box" id="dragBox">
         <div class="drag-box-header">
             <span>💡提示信息</span>
             <span class="close-x" id="closeX">×</span>
         </div>
         <div class="drag-box-content">
-            这里放置固定说明文字<br>
-            不可编辑，只做展示<br>
-            可拖动标题栏移动位置
+            通过点击左侧导航跳转页面<br>
+            提取码和解压码在教程页面
+           <br>
+           
         </div>
     </div>
-
 <script>
-        (function(){
-            const sidebar = document.getElementById('sidebar');
-            const toggleBtn = document.getElementById('toggleBtn');
-            const PASSWORD = "4321";
-            let block5Unlocked = false;
-            let pendingTargetId = null;
+(function(){
+    const sidebar = document.getElementById('sidebar');
+    const toggleBtn = document.getElementById('toggleBtn');
+    const PASSWORD = "4321";
+    let block5Unlocked = false;
+    let pendingTargetId = null;
+    const pwModal = document.getElementById('pwModal');
+    const pwInput = document.getElementById('pwInput');
+    const pwCancel = document.getElementById('pwCancel');
+    const pwOk = document.getElementById('pwOk');
 
-            const pwModal = document.getElementById('pwModal');
-            const pwInput = document.getElementById('pwInput');
-            const pwCancel = document.getElementById('pwCancel');
-            const pwOk = document.getElementById('pwOk');
+    //两个独立开关状态
+    const btnImg = document.getElementById('btnImg');
+    const btnVideo = document.getElementById('btnVideo');
+    const imgWrap = document.getElementById('imgWrap');
+    const videoWrap = document.getElementById('videoWrap');
 
-            function openPwModal(){
+    //所有页面、导航
+    const navLinks = document.querySelectorAll('.sidebar a[data-target]');
+    const pages = document.querySelectorAll('.page');
+    const catalogGotoLinks = document.querySelectorAll('.catalog-title-link[data-goto]');
+
+    //切换页面函数
+    function switchPage(pageId){
+        //离开教程页，重置所有图片视频状态
+        const oldPage = document.querySelector('.page.show');
+        if(oldPage && oldPage.id === 'tutorial'){
+            document.querySelectorAll('#tutorial .img-wrap, #tutorial .video-wrap').forEach(el => el.classList.remove('show'));
+            document.querySelectorAll('#tutorial .media-toggle-btn').forEach(btn => {
+                btn.textContent = btn.dataset.closeText;
+            });
+        }
+
+        pages.forEach(p=>p.classList.remove('show'));
+        navLinks.forEach(a=>a.classList.remove('active'));
+        document.getElementById(pageId).classList.add('show');
+        document.querySelector(`a[data-target="${pageId}"]`).classList.add('active');
+    }
+
+    //侧边导航点击
+    navLinks.forEach(link=>{
+        link.addEventListener('click',function(){
+            const tid = this.dataset.target;
+            if(tid === 'block5' && !block5Unlocked){
+                pendingTargetId = tid;
                 pwModal.style.display = 'flex';
                 pwInput.value = '';
                 pwInput.focus();
+                return;
             }
-            function closePwModal(){
-                pwModal.style.display = 'none';
-                pendingTargetId = null;
+            switchPage(tid);
+        })
+    })
+
+    //目录跳转点击
+    catalogGotoLinks.forEach(link=>{
+        link.addEventListener('click',function(){
+            const tid = this.dataset.goto;
+            if(tid === 'block5' && !block5Unlocked){
+                pendingTargetId = tid;
+                pwModal.style.display = 'flex';
+                pwInput.value='';
+                pwInput.focus();
+                return;
             }
+            switchPage(tid);
+        })
+    })
 
-            pwOk.onclick = function(){
-                const val = pwInput.value.trim();
-                if(val === PASSWORD){
-                    block5Unlocked = true;
-                    closePwModal();
-                    doSwitchPage(pendingTargetId);
-                }else{
-                    alert('密码错误！');
-                    pwInput.value='';
-                    pwInput.focus();
-                }
-            };
-            pwCancel.onclick = closePwModal;
-            pwInput.addEventListener('keydown',e=>{
-                if(e.key === 'Enter') pwOk.click();
-            });
+    //密码弹窗
+    pwCancel.onclick = function(){
+        pwModal.style.display = 'none';
+        pendingTargetId = null;
+    }
+    pwOk.onclick = function(){
+        if(pwInput.value === PASSWORD){
+            block5Unlocked = true;
+            pwModal.style.display = 'none';
+            if(pendingTargetId) switchPage(pendingTargetId);
+            pendingTargetId=null;
+        }else{
+            alert('密码错误');
+        }
+    }
 
-            toggleBtn.addEventListener('click', function(e){
-                e.stopPropagation();
-                sidebar.classList.toggle('collapsed');
-                if(sidebar.classList.contains('collapsed')){
-                    toggleBtn.innerHTML = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="9 6 15 12 9 18"></polyline></svg>`;
-                }else{
-                    toggleBtn.innerHTML = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="15 6 9 12 15 18"></polyline></svg>`;
-                }
-            });
+    //侧边栏收缩展开
+    toggleBtn.addEventListener('click',()=>{
+        sidebar.classList.toggle('collapsed');
+    })
 
-            const navLinks = document.querySelectorAll(".sidebar a[data-target]");
-            const pages = document.querySelectorAll(".page");
+    //教程页所有媒体切换按钮（通用）
+    document.querySelectorAll('.media-toggle-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const target = document.getElementById(btn.dataset.target);
+            if (!target) return;
+            target.classList.toggle('show');
+            btn.textContent = target.classList.contains('show') ? btn.dataset.openText : btn.dataset.closeText;
+        });
+    })
 
-            function switchPage(targetId) {
-                if(targetId === 'block5' && !block5Unlocked){
-                    pendingTargetId = targetId;
-                    openPwModal();
-                    return;
-                }
-                doSwitchPage(targetId);
+    //图片视频预览弹窗
+    const previewModal = document.getElementById('previewModal');
+    const previewClose = document.getElementById('previewClose');
+    const previewInner = document.getElementById('previewInner');
+
+    document.querySelectorAll('[data-preview]').forEach(el=>{
+        el.addEventListener('click',function(e){
+            e.stopPropagation();
+            const type = this.dataset.preview;
+            if(type === 'image'){
+                previewInner.innerHTML = `<img src="${this.src}">`;
+            }else if(type === 'video'){
+                const vdom = this.querySelector('video');
+                previewInner.innerHTML = `<video controls autoplay><source src="${vdom.querySelector('source').src}"></video>`;
             }
+            previewModal.classList.add('show');
+        })
+    })
+    previewClose.addEventListener('click',()=>{
+        previewModal.classList.remove('show');
+        previewInner.innerHTML='';
+    })
+    previewModal.addEventListener('click',(e)=>{
+        if(e.target === previewModal){
+            previewModal.classList.remove('show');
+            previewInner.innerHTML='';
+        }
+    })
 
-            function doSwitchPage(targetId){
-                navLinks.forEach(link=>link.classList.remove('active'));
-                pages.forEach(p=>p.classList.remove('show'));
-                const activeLink = document.querySelector(`.sidebar a[data-target="${targetId}"]`);
-                if(activeLink) activeLink.classList.add('active');
-                const targetPage = document.getElementById(targetId);
-                if(targetPage) targetPage.classList.add('show');
-            }
+    //卡片侧边详情面板
+    document.querySelectorAll('.card-quick-btn').forEach(btn=>{
+        btn.addEventListener('click',function(){
+            this.closest('.card-side-panel').classList.toggle('open');
+        })
+    })
 
-            navLinks.forEach(link=>{
-                link.addEventListener('click',function(e){
-                    e.preventDefault();
-                    const target = this.getAttribute('data-target');
-                    if(target) switchPage(target);
-                });
+    //右下角提示框关闭
+    document.getElementById('closeX').addEventListener('click',()=>{
+        document.getElementById('dragBox').style.display = 'none';
+    })
+    //右下角提示框拖拽
+    const dragBox = document.getElementById('dragBox');
+    const dragHeader = dragBox.querySelector('.drag-box-header');
+    let isDragging = false, dragOffsetX = 0, dragOffsetY = 0;
+    dragHeader.addEventListener('mousedown', function(e){
+        if(e.target.classList.contains('close-x')) return;
+        isDragging = true;
+        const rect = dragBox.getBoundingClientRect();
+        dragBox.style.left = rect.left + 'px';
+        dragBox.style.top = rect.top + 'px';
+        dragBox.style.right = 'auto';
+        dragBox.style.bottom = 'auto';
+        dragOffsetX = e.clientX - rect.left;
+        dragOffsetY = e.clientY - rect.top;
+        e.preventDefault();
+    });
+    document.addEventListener('mousemove', function(e){
+        if(!isDragging) return;
+        let x = e.clientX - dragOffsetX;
+        let y = e.clientY - dragOffsetY;
+        x = Math.max(0, Math.min(x, window.innerWidth - dragBox.offsetWidth));
+        y = Math.max(0, Math.min(y, window.innerHeight - dragBox.offsetHeight));
+        dragBox.style.left = x + 'px';
+        dragBox.style.top = y + 'px';
+    });
+    document.addEventListener('mouseup', function(){ isDragging = false; });
+    //目录页搜索：按标题或描述关键词过滤
+    const catalogSearch = document.getElementById('catalogSearch');
+    if(catalogSearch){
+        catalogSearch.addEventListener('input', function(){
+            const kw = this.value.trim().toLowerCase();
+            document.querySelectorAll('.catalog-item-block').forEach(item=>{
+                const title = (item.querySelector('.catalog-title-link')?.textContent || '').toLowerCase();
+                const desc = (item.querySelector('.catalog-item-desc')?.textContent || '').toLowerCase();
+                item.style.display = (kw==='' || title.includes(kw) || desc.includes(kw)) ? '' : 'none';
             });
+        });
+    }
+    //版块页卡片搜索：按卡片标题关键词过滤
+    document.querySelectorAll('.block-search').forEach(input=>{
+        input.addEventListener('input', function(){
+            const kw = this.value.trim().toLowerCase();
+            const page = this.closest('.page');
+            page.querySelectorAll('.card-item').forEach(card=>{
+                const text = (card.dataset.text || card.textContent).toLowerCase();
+                card.classList.toggle('hidden-card', kw!=='' && !text.includes(kw));
+            });
+        });
+    });
 
-            document.querySelectorAll('.catalog-title-link').forEach(el=>{
-                el.addEventListener('click',function(){
-                    const goto = this.getAttribute('data-goto');
-                    if(goto) switchPage(goto);
-                });
-            });
-
-            //====目录搜索====
-            const catalogSearch = document.getElementById('catalogSearch');
-            const catalogItems = document.querySelectorAll('.catalog-item-block');
-            catalogSearch.addEventListener('input',function(){
-                const kw = this.value.toLowerCase().trim();
-                catalogItems.forEach(item=>{
-                    const titleText = item.querySelector('.catalog-title-link').innerText.toLowerCase();
-                    const descText = item.querySelector('.catalog-item-desc').innerText.toLowerCase();
-                    if(titleText.includes(kw) || descText.includes(kw)){
-                        item.style.display='block';
-                    }else{
-                        item.style.display='none';
-                    }
-                });
-            });
-
-            //====版块页面搜索：同一页面全部card-item一起过滤====
-            document.querySelectorAll('.block-search').forEach(input=>{
-                input.addEventListener('input',function(){
-                    const kw = this.value.toLowerCase().trim();
-                    const pageDom = this.closest('.page');
-                    const cards = pageDom.querySelectorAll('.card-item');
-                    cards.forEach(card=>{
-                        const txt = card.getAttribute('data-text').toLowerCase();
-                        if(txt.includes(kw)){
-                            card.classList.remove('hidden-card');
-                        }else{
-                            card.classList.add('hidden-card');
-                        }
-                    });
-                });
-            });
-
-            //====卡片侧边面板展开/收起 · 点击左侧按钮向右滑出详情====
-            document.querySelectorAll('.card-quick-btn').forEach(btn=>{
-                btn.addEventListener('click',function(){
-                    const panel = this.closest('.card-side-panel');
-                    panel.classList.toggle('open');
-                    this.textContent = panel.classList.contains('open') ? '收起' : '详情';
-                })
-            })
-
-            //拖拽提示框
-            const dragBox = document.getElementById('dragBox');
-            const header = dragBox.querySelector('.drag-box-header');
-            const closeX = document.getElementById('closeX');
-            let isDrag = false;
-            let offsetX=0,offsetY=0;
-
-            header.addEventListener('mousedown',function(e){
-                if(e.target === closeX) return;
-                e.preventDefault();
-                const rect = dragBox.getBoundingClientRect();
-                offsetX = e.clientX - rect.left;
-                offsetY = e.clientY - rect.top;
-                isDrag = true;
-                dragBox.style.transition = 'none';
-            });
-            document.addEventListener('mousemove',e=>{
-                if(!isDrag) return;
-                dragBox.style.left = (e.clientX - offsetX)+'px';
-                dragBox.style.top = (e.clientY - offsetY)+'px';
-                dragBox.style.right = 'auto';
-                dragBox.style.bottom = 'auto';
-            });
-            document.addEventListener('mouseup',()=>{
-                if(isDrag){
-                    isDrag = false;
-                    dragBox.style.transition = 'box-shadow 0.2s';
-                }
-            });
-            closeX.addEventListener('click',e=>{
-                e.stopPropagation();
-                dragBox.style.display = 'none';
-            });
-        })();
+})();
 </script>
 </body>
 </html>
